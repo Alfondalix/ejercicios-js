@@ -30,9 +30,9 @@ function add(numberOne, numberTwo){
 
     if (typeof numberOne != "number" && typeof nomberTwo != "number") {
         return alert("One of the two parameters is not a number, value NaN");
+    }else{
+        return console.log(result)
     }
-
-    console.log(result)
 }
 
 /*
@@ -62,7 +62,10 @@ function add(numberOne, numberTwo){
         return alert("One of the two parameters is not a number, value NaN");
     }
     if(!Number.isInteger(numberOne)){
-
+        return alert("The number you chose is a decimal, rounded is: " + Math.floor(numberOne));
+    }
+    if(!Number.isInteger(numberTwo)){
+        return alert("The number you chose is a decimal, rounded is: " + Math.floor(numberTwo));
     }
 
     console.log(result)
@@ -70,7 +73,29 @@ function add(numberOne, numberTwo){
 add();
 
 /*
-    d-Convertir la validación del ejercicio 6b) en una función separada y 
+    e-Convertir la validación del ejercicio 6b) en una función separada y 
     llamarla dentro de la función suma probando que todo siga funcionando igual.
 */
 
+
+//function exercise b
+function add(numberOne, numberTwo){
+    var numberOne = Number(prompt("Insert a number:"));
+    var numberTwo = Number(prompt("Insert a number to add:"));
+    verifyInteger(numberOne);
+    verifyInteger(numberTwo);
+
+    var result = numberOne + numberTwo;
+
+    console.log(result)
+}
+
+//creating function separately
+
+function verifyInteger(num){
+    if (typeof num != "number") {
+        alert("One of the parameters is not a number, value NaN");
+    }
+}
+
+add();
