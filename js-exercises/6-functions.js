@@ -28,7 +28,7 @@ function add(numberOne, numberTwo){
     var numberTwo = Number(prompt("Insert a number to add:"));
     var result = numberOne + numberTwo;
 
-    if (typeof numberOne != "number" && typeof nomberTwo != "number") {
+    if (typeof numberOne != "number" || typeof nomberTwo != "number") {
         return alert("One of the two parameters is not a number, value NaN");
     }else{
         return console.log(result)
@@ -58,7 +58,7 @@ function add(numberOne, numberTwo){
     var numberTwo = Number(prompt("Insert a number to add:"));
     var result = numberOne + numberTwo;
 
-    if (typeof numberOne != "number" && typeof nomberTwo != "number") {
+    if (typeof numberOne != "number" || typeof nomberTwo != "number") {
         return alert("One of the two parameters is not a number, value NaN");
     }
     if(!Number.isInteger(numberOne)){
