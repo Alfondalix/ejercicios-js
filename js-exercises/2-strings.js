@@ -16,7 +16,7 @@ console.log(sentence.toUpperCase());
 */
 
 var song = "Undercover of Darkness";
-var songShort = song.substring(0,5);
+var songShort = song.substring(0,songShort.length - 5);
 
 console.log(songShort);
 
@@ -27,7 +27,7 @@ console.log(songShort);
 */
 
 var bandName = "the black keys";
-var bandShort = bandName.substring(11, 14);
+var bandShort = bandName.substring(bandName.length - 3, bandName.length);
 
 console.log(bandShort);
 
@@ -39,7 +39,7 @@ console.log(bandShort);
 */
 
 var company = "Alfonso's Company";
-var newCompany = company.substring(0,1).toUpperCase() + company.substring(1,17).toLowerCase();
+var newCompany = company.substring(0,1).toUpperCase() + company.substring(1,company.length).toLowerCase();
 
 console.log(newCompany);
 
@@ -63,6 +63,6 @@ console.log(lyricsIndex);
 */
 
 var movieName = "batman forever";
-var movieNameCorrect = movieName.substring(0,1).toUpperCase() + movieName.substring(1,6).toLowerCase() + " " + movieName.substring(7,8).toUpperCase() + movieName.substring(8,14).toLowerCase();
+var movieNameCorrect = movieName.substring(0,1).toUpperCase() + movieName.substring(1,movieName.length).toLowerCase() + " " + movieName.substring(7,8).toUpperCase() + movieName.substring(8,movieName.length).toLowerCase();
 
 console.log(movieNameCorrect);

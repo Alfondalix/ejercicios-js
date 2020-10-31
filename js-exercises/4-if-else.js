@@ -9,9 +9,9 @@
 var number = Math.random();
 
 if(number >= 0.5) {
-    return alert("Greater than 0,5");
+    alert("Greater than 0,5");
 }else {
-    return alert("Lower than 0,5");
+    alert("Lower than 0,5");
 }
 
 /*
@@ -29,19 +29,18 @@ if(number >= 0.5) {
 
  
 var age = 26;
-
  if (age < 2) {
-     return alert("Bebe");
- } else if(age >= 2 && age <= 12) {
-    return alert("Niño");
- } else if(age >= 13 && age <= 19) {
-     return alert("Adolescente");
- } else if(age >= 20 && age <= 30) {
-    return alert("Jóven");
- } else if(age >= 31 && age <= 60) {
-     return alert("Adulto");
- } else if(age >= 61 && age < 75) {
-     return alert("Adulto mayor");
+    alert("Bebe");
+ } else if(age < 12) {
+    alert("Niño");
+ } else if(age < 19) {
+    alert("Adolescente");
+ } else if(age < 30) {
+    alert("Jóven");
+ } else if(age < 60) {
+    alert("Adulto");
+ } else if(age < 75) {
+    alert("Adulto mayor");
  } else {
-     return alert("Anciano");
+    alert("Anciano");
  }

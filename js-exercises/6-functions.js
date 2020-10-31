@@ -7,15 +7,12 @@
 */
 
 function add(numberOne, numberTwo){
-    var numberOne = Number(prompt("Insert a number:"));
-    var numberTwo = Number(prompt("Insert a number to add:"));
     var result = numberOne + numberTwo;
      console.log(result);
  }
 
  add();
  
-
 
 /*
     b-A la función suma anterior, agregarle una validación para controlar si 
@@ -24,15 +21,12 @@ function add(numberOne, numberTwo){
 */
 
 function add(numberOne, numberTwo){
-    var numberOne = Number(prompt("Insert a number:"));
-    var numberTwo = Number(prompt("Insert a number to add:"));
     var result = numberOne + numberTwo;
-
-    if (typeof numberOne != "number" || typeof nomberTwo != "number") {
-        return alert("One of the two parameters is not a number, value NaN");
-    }else{
-        return console.log(result)
+    if (typeof numberOne !== "number" || typeof nomberTwo !== "number") {
+        alert("One of the two parameters is not a number");
+        return NaN;
     }
+    return console.log(result);
 }
 
 /*
@@ -41,9 +35,10 @@ function add(numberOne, numberTwo){
 */
 
 function validateInteger(number){
-    var number = Number(prompt("insert a number please:"));
     if (Number.isInteger(number)){
         return true;
+    }else{
+        return false;
     }
 }
 validateInteger();
@@ -53,22 +48,24 @@ validateInteger();
     que los números sean enteros. En caso que haya decimales mostrar un alerta 
     con el error y retorna el número convertido a entero (redondeado).
 */
+function validateInteger(number){
+    if (Number.isInteger(number)){
+        return true;
+    }else{
+        return false;
+    }
+}
+validateInteger();
+
 function add(numberOne, numberTwo){
-    var numberOne = Number(prompt("Insert a number:"));
-    var numberTwo = Number(prompt("Insert a number to add:"));
     var result = numberOne + numberTwo;
 
-    if (typeof numberOne != "number" || typeof nomberTwo != "number") {
-        return alert("One of the two parameters is not a number, value NaN");
+    if (typeof numberOne !== "number" || typeof nomberTwo !== "number") {
+        alert("One of the two parameters is not a number, value NaN");
+    }else{
+        var numberC = validateInteger(numberOne);
+        var numberD = validateInteger(numbertwo);
     }
-    if(!Number.isInteger(numberOne)){
-        return alert("The number you chose is a decimal, rounded is: " + Math.floor(numberOne));
-    }
-    if(!Number.isInteger(numberTwo)){
-        return alert("The number you chose is a decimal, rounded is: " + Math.floor(numberTwo));
-    }
-
-    console.log(result)
 }
 add();
 
@@ -80,8 +77,6 @@ add();
 
 //function exercise b
 function add(numberOne, numberTwo){
-    var numberOne = Number(prompt("Insert a number:"));
-    var numberTwo = Number(prompt("Insert a number to add:"));
     verifyInteger(numberOne);
     verifyInteger(numberTwo);
 
@@ -93,7 +88,7 @@ function add(numberOne, numberTwo){
 //creating function separately
 
 function verifyInteger(num){
-    if (typeof num != "number") {
+    if (typeof num !== "number") {
         alert("One of the parameters is not a number, value NaN");
     }
 }

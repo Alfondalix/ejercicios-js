@@ -25,6 +25,8 @@ console.log(monthSorted);
 months.unshift("January");
 months.push("December");
 
+console.log(months);
+
 /*
    d-Quitar un elemento del principio y del final del array (utilizar shift y pop).
 */
@@ -32,18 +34,24 @@ months.push("December");
 months.shift();
 months.pop();
 
+console.log(months);
+
 /*
    e-Invertir el orden del array (utilizar reverse).
 */
 
 months.reverse();
 
+console.log(months);
+
 /*
    f-Unir todos los elementos del array en un único string donde cada mes esté 
    separado por un guión - (utilizar join).
 */
 
-months.join("-");
+var monthsStr = months.join("-");
+
+console.log(monthsStr);
 
 /*
    g-Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
@@ -51,4 +59,6 @@ months.join("-");
 
 var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-months.slice(4, 11);
+var monthsSliced = months.slice(4, 11);
+
+console.log(monthsSliced);

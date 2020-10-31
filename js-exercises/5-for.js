@@ -18,8 +18,10 @@ for (var i = 0; i < weekDays.length; i++) {
 
 for (var i = 0; i < weekDays.length; i++) {
     
-    alert(weekDays[i].charAt(0)-toUpperCase() + weekDays.slice(1));
+    alert(weekDays[i].charAt(0).toUpperCase()+ weekDays[i].slice(1));
 }
+
+
 
 /*
     c-Crear una variable llamada “sentence” que tenga un string vacío, 
@@ -31,7 +33,7 @@ for (var i = 0; i < weekDays.length; i++) {
 var sentence = "";
 
 for (var i = 0; i < weekDays.length; i++) {
-    sentence = weekDays.toString();
+    sentence += weekDays[i];
 }
  alert(sentence);
 
@@ -45,7 +47,6 @@ for (var i = 0; i < weekDays.length; i++) {
 var numbers = [];
 
 for (var i = 0; i < 10; i++) {
-    numbers.push(1);
-    
+    numbers.push(i);
 }
  console.log(numbers);
